@@ -14,36 +14,36 @@
 
 //타입스크립트로 따라하기
 //1. https://gmlwjd9405.github.io/2018/07/06/strategy-pattern.html
-abstract class Robot {
-    name: string;
-    constructor(name: string){ this.name = name; }
-    public getName(): string { return this.name; }
-    public abstract move(): void;
-    public abstract attack(): void;   
-}
+// abstract class Robot {
+//     name: string;
+//     constructor(name: string){ this.name = name; }
+//     public getName(): string { return this.name; }
+//     public abstract move(): void;
+//     public abstract attack(): void;   
+// }
 
-class TaekwonV extends Robot {
-    constructor(name: string){ super(name); }
-    public attack() { console.log("나에겐 미사일이 있지"); }
-    public move() { console.log("난 걷기만 가능하지!"); }
-}
+// class TaekwonV extends Robot {
+//     constructor(name: string){ super(name); }
+//     public attack() { console.log("나에겐 미사일이 있지"); }
+//     public move() { console.log("난 걷기만 가능하지!"); }
+// }
 
-class Atom extends Robot {
-    constructor(name: string){ super(name); }
-    public attack() { console.log("나에겐 강한 주먹이 있지!"); }
-    public move() { console.log("나는 날수도 있지!"); }
-}
+// class Atom extends Robot {
+//     constructor(name: string){ super(name); }
+//     public attack() { console.log("나에겐 강한 주먹이 있지!"); }
+//     public move() { console.log("나는 날수도 있지!"); }
+// }
 
-class Client {
-    public static main(args: string): void {
-        const taekwonV: Robot =  new TaekwonV("TaekwonV");
-        const atom: Robot =  new Atom("Atom");
+// class Client {
+//     public static main(args: string): void {
+//         const taekwonV: Robot =  new TaekwonV("TaekwonV");
+//         const atom: Robot =  new Atom("Atom");
 
-        console.log(`my name is ${taekwonV.getName()}`);
-        taekwonV.move();
-        taekwonV.attack();
-        console.log(`my name is ${atom.getName()}`);
-        atom.move();
-        atom.attack();
-    }
-}
+//         console.log(`my name is ${taekwonV.getName()}`);
+//         taekwonV.move();
+//         taekwonV.attack();
+//         console.log(`my name is ${atom.getName()}`);
+//         atom.move();
+//         atom.attack();
+//     }
+// }

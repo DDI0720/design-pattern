@@ -1,0 +1,22 @@
+{
+  "name": "design-pattern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DDI0720/design-pattern.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DDI0720/design-pattern/issues"
+  },
+  "homepage": "https://github.com/DDI0720/design-pattern#readme",
+  "dependencies": {
+    "typescript": "^3.9.3"
+  }
+}
