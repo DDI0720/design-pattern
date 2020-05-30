@@ -39,22 +39,27 @@ var takeAWalk = /** @class */ (function () {
     };
     return takeAWalk;
 }());
+var gamanhee = /** @class */ (function () {
+    function gamanhee() {
+    }
+    gamanhee.prototype.doPlan = function () {
+        return '가만히 있어요';
+    };
+    return gamanhee;
+}());
 var Person = /** @class */ (function () {
     function Person(name) {
         this.name = name;
+        this.plan = new gamanhee();
     }
-    Person.prototype.setPlan = function (planName) {
-        this.planName = planName;
+    Person.prototype.setPlan = function (plan) {
+        this.plan = plan;
     };
     Person.prototype.doPlan = function () {
-        var _a;
-        console.log(this.name + " (\uC774)\uAC00 " + ((_a = this.planName) === null || _a === void 0 ? void 0 : _a.doPlan()));
+        console.log(this.name + " (\uC774)\uAC00 " + this.plan.doPlan());
     };
     return Person;
 }());
 var amber = new Person('amber');
-amber.setPlan(new eatVitamin());
-amber.doPlan();
-amber.setPlan(new takeAWalk());
 amber.doPlan();
 //# sourceMappingURL=strategy2.js.map

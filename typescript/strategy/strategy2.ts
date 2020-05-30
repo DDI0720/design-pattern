@@ -33,22 +33,26 @@ class takeAWalk implements GetHealthy {
     }
 }
 
+class gamanhee implements GetHealthy {
+    doPlan() {
+        return '가만히 있어요';
+    }
+}
+
 class Person implements GetHealthy {
-    planName: GetHealthy|undefined;
+    plan: GetHealthy;
     name: string;
     constructor(name: string) {
         this.name = name;
+        this.plan = new gamanhee();
     }
-    setPlan(planName: GetHealthy|undefined){
-        this.planName = planName;
+    setPlan(plan: GetHealthy){
+        this.plan = plan;
     }
     doPlan(){
-        console.log(`${this.name} (이)가 ${this.planName?.doPlan()}`)
+        console.log(`${this.name} (이)가 ${this.plan.doPlan()}`)
     }
 }
 
 let amber = new Person('amber');
-amber.setPlan(new eatVitamin());
-amber.doPlan();
-amber.setPlan(new takeAWalk());
 amber.doPlan();
