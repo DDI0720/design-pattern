@@ -31,14 +31,6 @@ class FRShoeStore extends ShoeStore {
         }
     }
 }
-class ShoeFactory {
-    makingShoes(name:string){
-        let shoes: Shoes = null;
-        
-    }
-}
-class KRshoeFactory extends ShoeFactory {}
-class FRshoeFactory extends ShoeFactory {}
 
 
 /* -------제품 클래스------- */
