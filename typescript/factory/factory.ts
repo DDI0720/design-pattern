@@ -12,7 +12,7 @@ class KRShoeStore extends ShoeStore {
     makeShoes(name: string){
         if (name === "blackShoes") {
             return new KR_blackShoe();
-        } else if (name === "PinkShoes") {
+        } else if (name === "pinkShoes") {
             return new KR_pinkShoe();
         } else {
             return null;
@@ -24,7 +24,7 @@ class FRShoeStore extends ShoeStore {
     makeShoes(name: string){
         if (name === "blackShoes") {
             return new FR_blackShoe();
-        } else if (name === "PinkShoes") {
+        } else if (name === "pinkShoes") {
             return new FR_pinkShoe();
         } else {
             return null;
@@ -77,3 +77,17 @@ class FR_blackShoe extends Shoes {
     leather = "말가죽";
     hasPattern = true;
 }
+
+class ShoeTest {
+    main() {
+        let krStore: ShoeStore = new KRShoeStore();
+        let frStore: ShoeStore = new FRShoeStore();
+        let shoes: Shoes = krStore.orderShoes("blackShoes");
+        console.log('한국매장에서 산 신발 ->', shoes.getName());
+        shoes = frStore.orderShoes('pinkShoes');
+        console.log('프랑스 매장에서 산 신발 -> ',shoes.getName());
+    }
+}
+
+let krblackshoe = new ShoeTest();
+krblackshoe.main();
