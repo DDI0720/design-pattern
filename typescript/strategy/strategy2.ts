@@ -36,6 +36,7 @@ class takeAWalk implements GetHealthy {
 class gamanhee implements GetHealthy {
     doPlan() {
         return '가만히 있어요';
+        //기본값
     }
 }
 

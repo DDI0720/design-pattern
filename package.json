@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tsc && node ./dist/factory/factory.js"
+    "test": "tsc && node ./dist/abstract-factory/client.js"
   },
   "repository": {
     "type": "git",

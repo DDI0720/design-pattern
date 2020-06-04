@@ -44,6 +44,7 @@ var gamanhee = /** @class */ (function () {
     }
     gamanhee.prototype.doPlan = function () {
         return '가만히 있어요';
+        //기본값
     };
     return gamanhee;
 }());
