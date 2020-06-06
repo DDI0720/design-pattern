@@ -5,7 +5,7 @@ var CoffeeMachine = /** @class */ (function () {
     function CoffeeMachine() {
     }
     CoffeeMachine.prototype.process = function () {
-        console.log('커피 없인 못살아 정말못살아!쿵짝!');
+        console.log('커피');
     };
     return CoffeeMachine;
 }());
@@ -14,7 +14,7 @@ var MilkMachine = /** @class */ (function () {
     function MilkMachine() {
     }
     MilkMachine.prototype.process = function () {
-        console.log('카스테라 우유 찍먹 옴뇸뇸');
+        console.log('우유');
     };
     return MilkMachine;
 }());

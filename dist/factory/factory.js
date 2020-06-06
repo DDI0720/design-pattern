@@ -60,6 +60,14 @@ var FRShoeStore = /** @class */ (function (_super) {
     };
     return FRShoeStore;
 }(ShoeStore));
+var StoreFactory = /** @class */ (function () {
+    function StoreFactory() {
+    }
+    StoreFactory.getFactory = function (shoeStore) {
+        return shoeStore;
+    };
+    return StoreFactory;
+}());
 /* -------제품 클래스------- */
 var Shoes = /** @class */ (function () {
     function Shoes() {
@@ -127,8 +135,10 @@ var ShoeTest = /** @class */ (function () {
     function ShoeTest() {
     }
     ShoeTest.prototype.main = function () {
-        var krStore = new KRShoeStore();
-        var frStore = new FRShoeStore();
+        var krStore = StoreFactory.getFactory(new KRShoeStore());
+        var frStore = StoreFactory.getFactory(new FRShoeStore());
+        //let krStore: ShoeStore = new KRShoeStore();
+        //let frStore: ShoeStore = new FRShoeStore();
         var shoes = krStore.orderShoes("blackShoes");
         console.log('한국매장에서 산 신발 ->', shoes.getName());
         shoes = frStore.orderShoes('pinkShoes');

@@ -33,6 +33,18 @@ class FRShoeStore extends ShoeStore {
 }
 
 
+interface StoreFactory { //팩토리 -> 추상팩토리
+    getFactory();
+}
+
+
+class StoreFactory implements StoreFactory { //팩토리 -> 추상팩토리
+    static getFactory(shoeStore: ShoeStore) {
+        return shoeStore;
+    }
+}
+
+
 /* -------제품 클래스------- */
 abstract class Shoes {
     name: string|undefined;
@@ -80,8 +92,10 @@ class FR_blackShoe extends Shoes {
 
 class ShoeTest {
     main() {
-        let krStore: ShoeStore = new KRShoeStore();
-        let frStore: ShoeStore = new FRShoeStore();
+        const krStore = StoreFactory.getFactory(new KRShoeStore()); //팩토리 -> 추상팩토리
+        const frStore = StoreFactory.getFactory(new FRShoeStore()); //팩토리 -> 추상팩토리
+        //let krStore: ShoeStore = new KRShoeStore();
+        //let frStore: ShoeStore = new FRShoeStore();
         let shoes: Shoes = krStore.orderShoes("blackShoes");
         console.log('한국매장에서 산 신발 ->', shoes.getName());
         shoes = frStore.orderShoes('pinkShoes');
