@@ -34,13 +34,13 @@ class FRShoeStore extends ShoeStore {
 
 
 interface StoreFactory { //팩토리 -> 추상팩토리
-    getFactory();
+    getFactory(): ShoeStore;
 }
 
 
 class StoreFactory implements StoreFactory { //팩토리 -> 추상팩토리
-    static getFactory(shoeStore: ShoeStore) {
-        return shoeStore;
+    static getFactory (type: new()=>ShoeStore) {
+        return new type();
     }
 }
 
@@ -92,8 +92,8 @@ class FR_blackShoe extends Shoes {
 
 class ShoeTest {
     main() {
-        const krStore = StoreFactory.getFactory(new KRShoeStore()); //팩토리 -> 추상팩토리
-        const frStore = StoreFactory.getFactory(new FRShoeStore()); //팩토리 -> 추상팩토리
+        const krStore = StoreFactory.getFactory(KRShoeStore); //팩토리 -> 추상팩토리
+        const frStore = StoreFactory.getFactory(FRShoeStore); //팩토리 -> 추상팩토리
         //let krStore: ShoeStore = new KRShoeStore();
         //let frStore: ShoeStore = new FRShoeStore();
         let shoes: Shoes = krStore.orderShoes("blackShoes");

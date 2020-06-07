@@ -63,8 +63,8 @@ var FRShoeStore = /** @class */ (function (_super) {
 var StoreFactory = /** @class */ (function () {
     function StoreFactory() {
     }
-    StoreFactory.getFactory = function (shoeStore) {
-        return shoeStore;
+    StoreFactory.getFactory = function (type) {
+        return new type();
     };
     return StoreFactory;
 }());
@@ -135,8 +135,8 @@ var ShoeTest = /** @class */ (function () {
     function ShoeTest() {
     }
     ShoeTest.prototype.main = function () {
-        var krStore = StoreFactory.getFactory(new KRShoeStore());
-        var frStore = StoreFactory.getFactory(new FRShoeStore());
+        var krStore = StoreFactory.getFactory(KRShoeStore); //팩토리 -> 추상팩토리
+        var frStore = StoreFactory.getFactory(FRShoeStore); //팩토리 -> 추상팩토리
         //let krStore: ShoeStore = new KRShoeStore();
         //let frStore: ShoeStore = new FRShoeStore();
         var shoes = krStore.orderShoes("blackShoes");
