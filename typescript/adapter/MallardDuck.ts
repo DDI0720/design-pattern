@@ -1,5 +1,5 @@
 import {Duck} from './Duck'
-class MarallrdDuck implements Duck {
+export class MarallrdDuck implements Duck {
     quack(): void {
         console.log("QUACK");
     }

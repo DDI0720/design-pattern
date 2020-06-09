@@ -1,4 +1,4 @@
-import {Duck} from './Duck';
+import { Duck } from './Duck';
 import { Turkey } from './Turkey';
 
 class TurkeyAdapter implements Duck {
