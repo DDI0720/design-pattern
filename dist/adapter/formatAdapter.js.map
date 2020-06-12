@@ -1,0 +1,1 @@
+{"version":3,"file":"formatAdapter.js","sourceRoot":"","sources":["../../typescript/adapter/formatAdapter.ts"],"names":[],"mappings":";;;AAGA;IAEI,uBAAa,CAAe;QACxB,IAAI,CAAC,KAAK,GAAG,CAAC,CAAC;IACnB,CAAC;IACD,4BAAI,GAAJ,UAAK,QAAgB;QACjB,OAAO,CAAC,GAAG,CAAC,cAAc,CAAC,CAAC;QAC5B,IAAI,CAAC,KAAK,CAAC,QAAQ,CAAC,QAAQ,CAAC,CAAC;IAClC,CAAC;IACL,oBAAC;AAAD,CAAC,AATD,IASC;AATY,sCAAa"}
