@@ -33,11 +33,11 @@ class Main {
 
 Main.main();
 
-/* 
-singleton instance creatated
+/*
 1
 노말버전 is called
 2
 노말버전 is called
 3
+singleton instance creatated
 */
