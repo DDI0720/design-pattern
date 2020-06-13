@@ -13,9 +13,12 @@ var Singleton = /** @class */ (function () {
         console.log("singleton instance creatated");
     }
     Singleton.getInstance = function () {
+        if (this.singleton === null) {
+            this.singleton = new Singleton();
+        }
         return this.singleton;
     };
-    Singleton.singleton = new Singleton();
+    Singleton.singleton = null;
     return Singleton;
 }());
 var Main = /** @class */ (function () {
