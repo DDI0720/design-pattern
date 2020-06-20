@@ -37,11 +37,11 @@ var Main = /** @class */ (function () {
 }());
 Main.main();
 /*
-singleton instance creatated
 1
 노말버전 is called
 2
 노말버전 is called
 3
+singleton instance creatated
 */ 
 //# sourceMappingURL=singleton.js.map
