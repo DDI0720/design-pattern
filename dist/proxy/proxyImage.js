@@ -5,10 +5,9 @@ var realImage_1 = require("./realImage");
 var ProxyImage = /** @class */ (function () {
     function ProxyImage(imageName) {
         this.imageName = imageName;
-        this.image = null;
     }
     ProxyImage.prototype.draw = function () {
-        if (this.image === null) {
+        if (!this.image) {
             this.image = new realImage_1.RealImage(this.imageName);
             this.image.draw();
         }
